@@ -1,4 +1,4 @@
-import { expect } from "chai";
+import { expect } from 'chai';
 import compact from "../src/compact.js";
 
 describe("compact.js", () => {

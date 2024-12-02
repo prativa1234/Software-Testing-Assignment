@@ -1,4 +1,4 @@
-import { expect } from "chai";
+import { expect } from 'chai';
 import divide from "../src/divide.js";
 
 describe("divide.js", () => {

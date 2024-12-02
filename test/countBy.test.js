@@ -1,4 +1,4 @@
-import { expect } from "chai";
+import { expect } from 'chai';
 import countBy from "../src/countBy.js";
 
 describe("countBy.js", () => {

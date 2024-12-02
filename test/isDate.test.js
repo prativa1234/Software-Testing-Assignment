@@ -1,4 +1,4 @@
-import { expect } from "chai";
+import { expect } from 'chai';
 import isDate from "../src/isDate.js";
 
 describe("isDate.js", () => {
