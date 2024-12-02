@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { expect } from "chai";
 import add from "../src/add.js";
 
 describe("add.js", () => {
@@ -40,4 +40,4 @@ describe("add.js", () => {
     it("should return NaN if no arguments are provided", () => {
         expect(add()).to.be.NaN;
     });
-});
+})

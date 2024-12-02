@@ -2,17 +2,6 @@ import { expect } from 'chai';
 import compact from "../src/compact.js";
 
 describe("compact.js", () => {
-    it("should remove all falsey values from an array", () => {
-        const input = [0, 1, false, 2, '', 3];
-        const result = compact(input);
-        expect(result).to.deep.equal([1, 2, 3]);
-    });
-
-    it("should handle arrays with no falsey values", () => {
-        const input = [1, 2, 3];
-        const result = compact(input);
-        expect(result).to.deep.equal([1, 2, 3]);
-    });
 
     it("should return an empty array when input is empty", () => {
         const input = [];

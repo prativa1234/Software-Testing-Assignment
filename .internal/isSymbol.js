@@ -1,5 +1,5 @@
 
-import getTag from './.internal/getTag.js'
+import getTag from './getTag.js'
 
 /**
  * Checks if `value` is classified as a `Symbol` primitive or object.
