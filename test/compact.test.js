@@ -1,22 +1,45 @@
-const { expect } = require("chai");
-const compact = require("../src/compact");
+import { expect } from "chai";
+import compact from "../src/compact.js";
 
 describe("compact.js", () => {
-    it("should remove falsy values from array", () => {
-        const input = [null, 'Snacks', undefined, 0, false, ""];
+    it("should remove all falsey values from an array", () => {
+        const input = [0, 1, false, 2, '', 3];
         const result = compact(input);
-        expect(result).to.deep.equal(['Snacks']);
+        expect(result).to.deep.equal([1, 2, 3]);
     });
 
-    it("should handle arrays with no falsy values", () => {
-        const input = ['Drinks', 'Vegan'];
+    it("should handle arrays with no falsey values", () => {
+        const input = [1, 2, 3];
         const result = compact(input);
-        expect(result).to.deep.equal(['Drinks', 'Vegan']);
+        expect(result).to.deep.equal([1, 2, 3]);
     });
 
-    it("should return an empty array if input is empty", () => {
+    it("should return an empty array when input is empty", () => {
         const input = [];
         const result = compact(input);
         expect(result).to.deep.equal([]);
+    });
+
+    it("should handle arrays with all falsey values", () => {
+        const input = [0, false, null, undefined, NaN, ""];
+        const result = compact(input);
+        expect(result).to.deep.equal([]);
+    });
+
+    it("should handle mixed data types in the array", () => {
+        const input = [0, "string", false, true, null, 42];
+        const result = compact(input);
+        expect(result).to.deep.equal(["string", true, 42]);
+    });
+
+    it("should return an empty array if input is null or undefined", () => {
+        expect(compact(null)).to.deep.equal([]);
+        expect(compact(undefined)).to.deep.equal([]);
+    });
+
+    it("should throw an error if input is not an array", () => {
+        expect(() => compact("not an array")).to.throw();
+        expect(() => compact(42)).to.throw();
+        expect(() => compact({})).to.throw();
     });
 });
