@@ -1,27 +1,23 @@
-name: Node.js CI
+kname: Node.js CI
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
-    runs-on: ubuntu-20.04  # You can use a specific Ubuntu version
-    
+    runs-on: ubuntu-latest
+
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'  # Adjust Node.js version if necessary
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run tests
-      run: npm test  # Or your specific test command
+        node-version: '22.9.0' #
 
