@@ -21,3 +21,13 @@ jobs:
       with:
         node-version: '22.9.0' #
 
+    - name: Install dependencies
+        run: npm install
+
+    - name: Run tests
+        run: npm test
+
+    - name: Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
