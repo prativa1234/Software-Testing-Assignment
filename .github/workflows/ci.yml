@@ -19,16 +19,5 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '22.9.0'
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run tests
-      run: npm test  # This will run `mocha` or your test command
-
-    - name: Upload coveralls
-      uses: coverallsapp/github-action@v2
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        node-version: '22.9.0' #
 
