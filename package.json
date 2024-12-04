@@ -7,21 +7,6 @@
   "scripts": {
     "test": "mocha --reporter mochawesome"
   },
-  "nyc": {
-    "reporter": [
-      "lcov",
-      "text",
-      "html"
-    ],
-    "all": true,
-    "include": [
-      "src/**/*.js"
-    ],
-    "exclude": [
-      "**/*.test.js",
-      "test/**"
-    ]
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -31,3 +16,4 @@
     "mochawesome": "^7.1.3"
   }
 }
+
