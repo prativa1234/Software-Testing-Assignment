@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "nyc mocha --reporter mochawesome",
-    "coverage": "nyc --reporter=lcov mocha && coveralls < coverage/lcov.info"
+    "test": "mocha --reporter mochawesome",
   },
   "nyc": {
     "reporter": [
@@ -29,7 +28,6 @@
   "devDependencies": {
     "chai": "^5.1.2",
     "mocha": "^10.8.2",
-    "mochawesome": "^7.1.3",
-    "nyc": "^17.1.0"
+    "mochawesome": "^7.1.3"
   }
 }
