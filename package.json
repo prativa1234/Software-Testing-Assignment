@@ -8,6 +8,12 @@
     "test": "nyc mocha --reporter mochawesome",
     "coverage": "nyc --reporter=lcov mocha && coveralls < coverage/lcov.info"
   },
+   "nyc": {
+    "reporter": ["lcov", "text", "html"],
+    "all": true,
+    "include": ["src/**/*.js"],
+    "exclude": ["**/*.test.js", "test/**"]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
